@@ -6,7 +6,13 @@ LoginGraceTime 2m
 PermitRootLogin without-password
 MaxAuthTries 6
 
-HostKey {{ ssh_hostkey }}
+{% if ssh_ecdsa_hostkey_found %}
+HostKey {{ ssh_ecdsa_hostkey }}
+{% endif %}
+
+{% if ssh_rsa_hostkey_found %}
+HostKey {{ ssh_rsa_hostkey }}
+{% endif %}
 
 IgnoreRhosts yes
 PermitEmptyPasswords no
