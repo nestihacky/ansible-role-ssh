@@ -1,5 +1,5 @@
-apache
-======
+ssh
+===
 
 SSH configurator for RHEL/CentOS 7 and Fedora 22+.
 
