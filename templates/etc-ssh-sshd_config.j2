@@ -33,7 +33,7 @@ PrintLastLog yes
 #AcceptEnv LC_IDENTIFICATION LC_ALL LANGUAGE
 #AcceptEnv XMODIFIERS
 
-{% if ansible_os_family == 'RedHat' %}
+{% if ansible_os_family == 'RedHat' or ansible_os_family == 'Generic' %}
 Subsystem sftp /usr/libexec/openssh/sftp-server
 {% endif %}
 {% if ansible_os_family == 'Debian' %}
